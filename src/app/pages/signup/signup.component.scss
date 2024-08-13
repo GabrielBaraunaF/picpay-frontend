@@ -1,0 +1,35 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 8px;
+}
+   
+   .radiobtngroup{
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    margin-bottom: 20px;
+     
+    input[type='radio'] {
+        appearance: none;
+
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+      
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 5px;
+      
+        position: relative;
+        top: 4px;
+      }
+      input:checked {
+        border: 6px solid rgb(35, 134, 98);;;
+      }
+
+
+}
+
+  

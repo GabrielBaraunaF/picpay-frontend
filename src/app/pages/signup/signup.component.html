@@ -1,0 +1,65 @@
+<app-default-login
+  label="Crie sua conta"
+  primaryBtnText="signup"
+  secundaryBtnText="login"
+  [disablePrimaryBtn]="!signupform.valid"
+  (submit)="submit()"
+  (navigate)="navigate()"
+>
+  <form [formGroup]="signupform">
+
+    <div class="radiobtngroup">
+      <input
+        type="radio"
+        formControlName="type"
+        value="c"
+        id="usuario"
+        (change)="onRadioChange($event)"
+      />
+      <label for="type">usuario</label><br />
+      <input
+        type="radio"
+        formControlName="type"
+        value="u"
+        id="lojista"
+        (change)="onRadioChange($event)"
+      />
+      <label for="type">lojista</label><br />
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Digite seu nome</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error>name is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Digite seu {{ usertype }} </mat-label>
+      <input type="text" matInput formControlName="cpf" />
+      <mat-error>cpf is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Digite seu email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" />
+      @if (signupform.get('email')?.hasError('email') &&
+      !signupform.get('email')?.hasError('required')) {
+      <mat-error>Please enter a valid email address</mat-error>
+      } @if (signupform.get('email')?.hasError('required')) {
+      <mat-error>Email is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Digite sua chave PIX</mat-label>
+      <input matInput formControlName="keyPix" />
+      <mat-error>pix is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>crie sua senha</mat-label>
+      <input matInput formControlName="password" type="password" />
+      <mat-error>password is <strong>required</strong></mat-error>
+    </mat-form-field>
+  </form>
+</app-default-login>

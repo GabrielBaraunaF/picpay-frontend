@@ -1,0 +1,35 @@
+<app-default-login
+  label="acesse sua conta"
+  [disablePrimaryBtn]=!loginform.valid
+  primaryBtnText="login" 
+  secundaryBtnText="signup" 
+  (submit)="submit()" 
+  (navigate)="navigate()">
+
+    <form [formGroup]="loginform">
+
+        <mat-form-field  appearance="outline">
+          <mat-label>Entre com seu email</mat-label>
+          <input matInput
+           placeholder="pat@example.com"
+           formControlName="email">
+           @if (loginform?.get('email')?.hasError('email') && !loginform?.get('email')?.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+          }      
+          @if (loginform?.get('email')?.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+          }
+        </mat-form-field>
+
+      <mat-form-field class="entrada" appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input matInput
+         formControlName="senha">      
+        @if (loginform?.get('senha')?.hasError('required')) {
+          <mat-error>password is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+      
+     </form>
+
+</app-default-login>

@@ -1,0 +1,45 @@
+<main>
+  <header>
+    <section>
+      <img src="/assets/svg/picpay.svg" alt="" />
+      <div class="header_btn">
+        <button (click)="showHideBalance()">
+          <mat-icon class="navbar_icon"  *ngIf="mostrasaldo">visibility_off</mat-icon>
+          <mat-icon class="navbar_icon" *ngIf="!mostrasaldo">visibility</mat-icon>
+        </button>
+        <button>Conta</button>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section class="navbar">
+      <h6>olá, {{ username }}</h6>
+      <div class="button">
+        <a href=""
+          ><mat-icon class="navbar_icon">account_balance_transfer</mat-icon
+          >Pix</a
+        >
+        <a href=""><mat-icon class="navbar_icon">history</mat-icon>historico</a>
+      </div>
+    </section>
+  </header>
+  <div class="degrade"></div>
+
+  <section class="content">
+    <ng-content></ng-content>
+  </section>
+
+  <footer>
+    <img src="/assets/image.png" alt="" />
+    <div class="social">
+      <h6>Social</h6>
+      <a href=""><img src="" alt="instagram" /></a>
+      <a href=""><img src="" alt="facebook" /></a>
+      <a href=""><img src="" alt="twiter" /></a>
+    </div>
+    <div>
+      <h6>SAC</h6>
+      <p>0800 025 08000</p>
+      <p>Disponivel todos os dias, 24h.</p>
+    </div>
+  </footer>
+</main>

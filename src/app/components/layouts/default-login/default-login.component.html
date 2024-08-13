@@ -1,0 +1,13 @@
+<main>
+    <section class="form-section">
+        <img src="/assets/svg/picpay.svg" alt="">
+        <h2>{{label}}</h2>
+        <ng-content></ng-content>
+        <div class="btn-group">
+            <button class="primaryBtn" (click)="submit()" [disabled]="disablePrimaryBtn"> {{ primaryBtnText }} </button>
+            <button class="secundaryBtn" (click)="navigate()"> {{ secundaryBtnText }}</button>
+        </div>        
+    </section>
+    <section class="main-section">
+    </section>
+</main>

@@ -1,0 +1,57 @@
+<app-main-layout
+(showHideBalance)="showHideBalance()">
+  <main>
+    <section class="cards">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-subtitle>
+            <div class="card_image">
+              <img src="/assets/logo_picpay_pequeno_n.png" alt="" />
+              <mat-icon>trending_up</mat-icon>
+              <p>Rendendo 102% do CDI</p>
+            </div>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Saldo Total:</p>
+          <mat-card-footer>
+            <h6>R${{ saldo }}</h6>
+          </mat-card-footer>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-subtitle
+            ><div class="card_image">
+              <img src="/assets/logo_picpay_pequeno_b.png" alt="" />
+              <p>Picpay card em breve</p>
+            </div></mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <p>Saldo Total:</p>
+          <mat-card-footer>
+            <h6>R${{ saldo }}</h6>
+          </mat-card-footer>
+        </mat-card-content>
+      </mat-card>
+    </section>
+
+    <section class="banners">
+      <section>
+        <h3>informações do usuario</h3>
+
+        <div *ngIf="user$ | async as user">
+          <p>Nome: {{ user.name }}</p>
+          <p>Email: {{ user.email }}</p>
+          <p>cpf: {{ user.cpf }}</p>
+          <p>keypix: {{ user.keyPix }}</p>
+          <p>status: {{ user.active }}</p>
+          <p>numero da conta: {{ user.accountNumber }}</p>
+        </div>
+        <div *ngIf="!(user$ | async)">Carregando dados do usuário...</div>
+      </section>
+    </section>
+  </main>
+</app-main-layout>

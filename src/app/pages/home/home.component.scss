@@ -1,0 +1,71 @@
+.example-card {
+  min-width: 400px;
+  max-width: 800px;
+  min-height: 200px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #eeecec;
+  color: rgb(34, 34, 34);
+  font-size: 14px;
+
+  h6 {
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
+  }
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 10px;
+  }
+
+  .card_image {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      background-color: aquamarine;
+    }
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  
+
+  .cards {
+    display: flex;
+    gap: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  
+
+  .banners{
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 50px;
+    
+
+    section{
+      border: 2px solid green;
+      border-radius: 20px;
+      background-color: rgb(244, 248, 248);
+      display: flex;
+      flex-direction: column;
+      min-width: 400px;
+      max-width: 800px;
+      min-height: 200px;
+      max-height: 1000px;
+    }
+  }
+}

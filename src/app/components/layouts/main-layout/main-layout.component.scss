@@ -1,0 +1,93 @@
+main {
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    flex-grow: 2;
+    gap: 10px;
+
+    a {
+      display: flex;
+      gap: 10px;
+      color:rgb(113, 113, 113) ;
+      font-size: 14px;
+    }
+    button {
+      background-color: transparent;
+      border-color: transparent;
+      cursor: pointer;
+    }
+
+    section {
+      padding-left: 300px;
+      padding-right: 300px;
+      display: flex;
+      justify-content: space-between;
+
+      .header_btn {
+        display: flex;
+        gap: 40px;
+        padding-top: 20px;
+      }
+    }
+
+    img {
+      margin-top: 10px;
+      width: 100px;
+    }
+
+    .navbar {
+      display: flex;
+      color: rgb(113, 113, 113);
+      font-size: 10px;
+      line-height: 28px;
+      font-weight: 700;
+      justify-content: space-between;
+      gap: 200px;
+    }
+    .button {
+      display: flex;
+      gap: 100px;
+    }
+  }
+
+  .content {
+    flex-grow: 4;
+  }
+  .degrade {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, #f0efef, white);
+  }
+
+  footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    flex-grow: 3;
+    justify-content: space-between;
+    align-items: center;
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: white;
+        }
+        
+    }
+  }
+
+}.navbar_icon{
+    color: black;
+}
