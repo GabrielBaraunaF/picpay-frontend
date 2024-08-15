@@ -12,7 +12,7 @@
     </section>
     <mat-divider></mat-divider>
     <section class="navbar">
-      <h6>olá, {{ username }}</h6>
+      <h6>olá, {{ (user$| async)?.email }}</h6>
       <div class="button">
         <a href=""
           ><mat-icon class="navbar_icon">account_balance_transfer</mat-icon
