@@ -1,3 +1,75 @@
 <app-main-layout (showHideBalance)="showHideBalance()">
+  <main>
+    <section class="title">
+      <h2>Historico de Transações</h2>
+    </section>
+    <section class="transaction_table">
+      <table
+        mat-table
+        [dataSource]="dataSource"
+        matSort
+        (matSortChange)="announceSortChange($event)"
+        class="mat-elevation-z8"
+      >
+        <!-- Position Column -->
+        <ng-container matColumnDef="value">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by value"
+          >
+            Valor
+          </th>
+          <td mat-cell *matCellDef="let transaction">
+            {{ transaction.value | currency : "BRL" : true : "1.2-2" }}
+          </td>
+        </ng-container>
 
+        <ng-container matColumnDef="payer">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by payer"
+          >
+            pagador
+          </th>
+          <td mat-cell *matCellDef="let transaction">
+            {{ transaction.payer }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payee">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by payee"
+          >
+            beneficaria
+          </th>
+          <td mat-cell *matCellDef="let transaction">
+            {{ transaction.payee }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by date"
+          >
+            data
+          </th>
+          <td mat-cell *matCellDef="let transaction">
+            {{ transaction.date | date : "dd/MM/yyyy" : "pt-BR" }}
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </section>
+  </main>
 </app-main-layout>
