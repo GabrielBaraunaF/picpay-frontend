@@ -4,6 +4,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { authenticationGuard } from './_guards/authentication.guard';
 import { TransactionHistoryComponent } from './pages/transaction-history/transaction-history.component';
+import { TransferComponent } from './pages/transfer/transfer.component';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,11 @@ export const routes: Routes = [
     {
         path: "history",
         component: TransactionHistoryComponent,
+        canActivate:[authenticationGuard]  
+    },
+    {
+        path: "transfer",
+        component: TransferComponent,
         canActivate:[authenticationGuard]  
     }
 ];

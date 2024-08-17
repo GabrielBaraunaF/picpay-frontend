@@ -1,0 +1,22 @@
+<app-main-layout (showHideBalance)="showHideBalance()">
+  <main>
+    <h3>Transferência PIX</h3>
+    <div class="box">
+      <h6>Dados da transferência</h6>
+      <form [formGroup]="transferForms">
+        <mat-form-field appearance="outline">
+          <mat-label>Digite a chave PIX</mat-label>
+          <input matInput formControlName="keyPix" />
+          <mat-error>pix is <strong>required</strong></mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Quanto você quer transferir</mat-label>
+          <input matInput formControlName="value" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+          <mat-error>valor é <strong>necessario</strong></mat-error>
+        </mat-form-field>
+      </form>
+      <p>saldo disponivel: R$12,00</p>
+      <button [disabled]="transferForms.invalid">Transferir</button>
+    </div>
+  </main>
+</app-main-layout>

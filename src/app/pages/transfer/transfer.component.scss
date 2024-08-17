@@ -1,0 +1,43 @@
+.box {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: 20px;
+}
+button {
+  margin-top: 10px;
+  width: 30%;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  background-color: rgb(35, 134, 98);
+  padding: 12px 29px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
