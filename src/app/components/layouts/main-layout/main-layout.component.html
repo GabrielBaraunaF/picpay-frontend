@@ -1,18 +1,20 @@
 <main>
   <header>
-    <section>
+    <section class="navbar">
       <a href="home"><img src="/assets/svg/picpay.svg" alt="" /></a>
       <div class="header_btn">
         <button (click)="showHideBalance()">
           <mat-icon class="navbar_icon"  *ngIf="mostrasaldo">visibility_off</mat-icon>
           <mat-icon class="navbar_icon" *ngIf="!mostrasaldo">visibility</mat-icon>
         </button>
-        <button>Conta</button>
+        <button><mat-icon class="navbar_icon">logout</mat-icon>Sair</button>
       </div>
     </section>
+
     <mat-divider></mat-divider>
+
     <section class="navbar">
-      <h6>olá, {{ (user$| async)?.email }}</h6>
+      <h6>olá, {{ (user$| async)?.name }}</h6>
       <div class="button">
         <a href="transfer"
           ><mat-icon class="navbar_icon">account_balance_transfer</mat-icon
@@ -22,6 +24,7 @@
       </div>
     </section>
   </header>
+
   <div class="degrade"></div>
 
   <section class="content">

@@ -4,26 +4,35 @@ main{
     justify-content: center;
     align-items: flex-start;
     margin-left: 300px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-right: 300px;
     margin-bottom: 20px;
     border-radius: 15px;
     gap: 20px;
-   
-    border: 1px solid  black;
-
+    
     .title{
         color: rgb(35, 134, 98);;;;
         margin-left: 30px;
         margin-top: 5px;
     }
 
-    table{
-        min-width: 1000px;
-        margin-bottom: 70px;
-        margin-left: 30px;
-        
-    }
+    .box {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 80%;
+      }
+      .mat-mdc-row .mat-mdc-cell {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        cursor: pointer;
+      }
+      
+      .mat-mdc-row:hover .mat-mdc-cell {
+        border-color: currentColor;
+      }
 
     
 }

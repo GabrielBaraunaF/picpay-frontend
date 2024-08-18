@@ -38,7 +38,6 @@ main {
   margin-bottom: 100px;
   justify-content: center;
   align-items: flex-start;
-  
 
   .cards {
     display: flex;
@@ -46,26 +45,32 @@ main {
     padding-left: 300px;
     padding-right: 300px;
   }
-  
 
-  .banners{
+  .banners {
     display: flex;
     flex-direction: column;
     padding-left: 300px;
-    padding-right: 300px;
+    padding-right: 30px;
     margin-top: 50px;
-    
+    width: 100%;
 
-    section{
+    section {
       border: 2px solid green;
       border-radius: 20px;
       background-color: rgb(244, 248, 248);
       display: flex;
       flex-direction: column;
-      min-width: 400px;
-      max-width: 800px;
-      min-height: 200px;
-      max-height: 1000px;
+    }
+
+    .box {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

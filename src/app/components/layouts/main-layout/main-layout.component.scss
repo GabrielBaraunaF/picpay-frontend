@@ -19,7 +19,7 @@ main {
     a {
       display: flex;
       gap: 10px;
-      color:rgb(113, 113, 113) ;
+      color: rgb(113, 113, 113);
       font-size: 14px;
     }
     button {
@@ -36,7 +36,7 @@ main {
 
       .header_btn {
         display: flex;
-        gap: 40px;
+        gap: 180px;
         padding-top: 20px;
       }
     }
@@ -79,19 +79,18 @@ main {
     align-items: center;
     max-height: 250px;
 
-    .social{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-        a{
-            color: white;
-        }
-        
+      a {
+        color: white;
+      }
     }
   }
-
-}.navbar_icon{
-    color: black;
+}
+.navbar_icon {
+  color: black;
 }

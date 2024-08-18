@@ -39,7 +39,7 @@
     </section>
 
     <section class="banners">
-      <section>
+      <div class="box">
         <h3>informações do usuario</h3>
 
         <div *ngIf="user$ | async as user">
@@ -51,7 +51,7 @@
           <p>numero da conta: {{ user.accountNumber }}</p>
         </div>
         <div *ngIf="!(user$ | async)">Carregando dados do usuário...</div>
-      </section>
+      </div>
     </section>
   </main>
 </app-main-layout>
