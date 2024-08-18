@@ -7,7 +7,7 @@
           <mat-icon class="navbar_icon"  *ngIf="mostrasaldo">visibility_off</mat-icon>
           <mat-icon class="navbar_icon" *ngIf="!mostrasaldo">visibility</mat-icon>
         </button>
-        <button><mat-icon class="navbar_icon">logout</mat-icon>Sair</button>
+        <button (click)="logout()"><mat-icon class="navbar_icon">logout</mat-icon>Sair</button>
       </div>
     </section>
 
