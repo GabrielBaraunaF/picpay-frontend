@@ -22,7 +22,7 @@ export class MainLayoutComponent {
   user$=this.userService.user$;
 
   ngOnInit(): void {
-    this.userService.user$.subscribe;
+    this.userService.user$.subscribe();
    }
   
   mostrasaldo=true;

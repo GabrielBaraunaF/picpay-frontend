@@ -19,9 +19,8 @@ form{
         height: 16px;
       
         border: 2px solid #999;
-        transition: 0.2s all linear;
-        margin-right: 5px;
-      
+        transition: 0.2s all linear; 
+
         position: relative;
         top: 4px;
       }
@@ -31,5 +30,10 @@ form{
 
 
 }
-
+@media (max-height: 860px) {
+  form{
+   overflow: scroll;
+   width: 100;
+  }
+}
   
