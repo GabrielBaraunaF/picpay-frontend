@@ -1,10 +1,9 @@
 <app-main-layout (showHideBalance)="showHideBalance()">
   <main>
-    <div class="box">
     <section class="title">
       <h2>Historico de Transações</h2>
     </section>
-    <section class="transaction_table">
+    <div class="box">
       <table
         mat-table
         [dataSource]="dataSource"
@@ -71,7 +70,6 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
-    </section>
   </div>
   </main>
 </app-main-layout>

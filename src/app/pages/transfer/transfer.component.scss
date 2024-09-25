@@ -4,7 +4,7 @@
   padding: 20px;
   margin: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 40%;
+  width: 50%;
 }
 form {
   display: flex;
@@ -22,14 +22,14 @@ main {
 }
 button {
   margin-top: 10px;
-  width: 30%;
+  width: 40%;
   font-size: 15px;
   font-weight: 400;
   border-radius: 15px;
   color: white;
   border: none;
   background-color: rgb(35, 134, 98);
-  padding: 12px 29px;
+  padding: 12px 24px;
   cursor: pointer;
 
   &:disabled {
@@ -41,3 +41,14 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+@media (max-width: 960px) {
+ main{
+  margin-left: 0px;
+  align-items: center;
+
+  button{
+    padding: 12px 17px;
+  }
+ }
+}
+

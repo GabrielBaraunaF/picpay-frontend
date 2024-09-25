@@ -2,10 +2,8 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 300px;
+    align-items: center;
     margin-top: 50px;
-    margin-right: 300px;
     margin-bottom: 20px;
     border-radius: 15px;
     gap: 20px;
@@ -22,7 +20,8 @@ main{
         padding: 20px;
         margin: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 80%;
+        width: 60%;
+        overflow-x: auto
       }
       .mat-mdc-row .mat-mdc-cell {
         border-bottom: 1px solid transparent;
@@ -33,6 +32,14 @@ main{
       .mat-mdc-row:hover .mat-mdc-cell {
         border-color: currentColor;
       }
+      .mat-elevation-z8 {    
+        overflow-x: auto;
+       }
 
     
 }
+@media (max-width: 800px) {
+  .box{
+    width: 80% !important;
+  }
+ }
