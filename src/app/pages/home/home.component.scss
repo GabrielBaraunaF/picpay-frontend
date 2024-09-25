@@ -1,11 +1,8 @@
 .example-card {
-  min-width: 400px;
-  max-width: 800px;
-  min-height: 200px;
-  max-height: 400px;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-self: center;
   background-color: #eeecec;
   color: rgb(34, 34, 34);
   font-size: 14px;
@@ -38,21 +35,20 @@ main {
   margin-bottom: 100px;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
 
   .cards {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    padding-left: 300px;
-    padding-right: 300px;
+    width: 100%;
   }
 
   .banners {
     display: flex;
     flex-direction: column;
-    padding-left: 300px;
-    padding-right: 30px;
-    margin-top: 50px;
     width: 100%;
+    font-size: 0.8rem;
 
     section {
       border: 2px solid green;
@@ -68,9 +64,23 @@ main {
       padding: 20px;
       margin: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 50%;
+      width: 90%;
       display: flex;
       flex-direction: column;
     }
   }
+}
+@media (min-width: 768px) {
+  .cards{
+    display: flex;
+    flex-direction: row !important;
+  }
+ .cards{
+  width: 60% !important;
+  align-self: center !important;
+ }
+ .box{
+  width: 60% !important;
+  align-self: center !important;
+ }
 }
